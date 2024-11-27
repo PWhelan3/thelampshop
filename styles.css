@@ -1,0 +1,355 @@
+/* For the styling of these pages msot of the methods and styling ahs been figured out through
+trial and error, web3 schools, stack overflow, and from previous experience doing a professional
+ certificate in web development. I hope I have done a reasonable job at decribing what I am
+ trying to achieve with each part of styling and hope it is clear! */
+
+/* Peter Whelan
+index.css
+Novemebr 2024 */
+
+
+
+
+/* Colour variables */
+:root {
+    --primary-color: #f9ecd2; /* Background for sections */
+    --secondary-color: #fddf9d; /* Accent colour for gradients and highlights */
+    --text-color: black; /* Text colour */
+    --hover-color: #2d5a15; /* Hover effect colour */
+    --shadow-color: rgba(122, 149, 91, 0.8); /* Box shadow colour */
+}
+
+/* Global styling */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    overflow-x: hidden;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+/* For the about paragraph */
+p {
+    padding: 0.25%;
+}
+
+
+
+/*  */
+/* Navbar styling */
+/*  */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+    padding: 2%;
+    margin: 2% auto;
+    width: 84%;
+    height: auto;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+    border-radius: 10px;
+}
+
+.logo-container,
+.menu-container {
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li {
+    display: inline;
+    transition: transform 0.3s ease;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    transition: border-bottom 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: solid var(--hover-color) 3px;
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*  */
+/* Featured container */
+/*  */
+.featured-container {
+    background-color: var(--primary-color);
+    padding: 5%;
+    margin: 5% auto;
+    width: 80%;
+    height: 70vh;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Title styling */
+.feat-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Carousel container styling */
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+
+/* Carousel styling */
+.carousel {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: calc(100% * 5);
+    height: 90%;
+    gap: 40px;
+}
+
+/* Styling for individual images */
+.feat-img {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    transition: ease-in-out 0.3s;
+}
+
+.feat-img:hover {
+    transform: scale(1.1);
+}
+
+/* Hover effect to pause the animation */
+.carousel-container:hover .carousel {
+    animation-play-state: paused;
+}
+
+/* Animation for moving the carousel continuously */
+@keyframes moveCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+/* Animation for the carousel */
+.carousel {
+    animation: moveCarousel 30s linear infinite;
+}
+
+
+
+/*  */
+/* About container */
+/*  */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 3%;
+    margin: 5% auto;
+    width: 80%;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+    border-radius: 10px;
+}
+
+.about-title {
+    text-align: center;
+    width: 100%;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.about-description {
+    flex: 1 1 55%;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-right: 2%;
+}
+
+.about-img-contain {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+}
+
+
+
+/*  */
+/* Newsletter container */
+/*  */
+.newsletter-container {
+    background-color: var(--primary-color);
+    padding: 5%;
+    margin: 5% auto;
+    width: 80%;
+    height: 30vh;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.newsletter-container h2 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.newsletter-container p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.newsletter-container input {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+}
+
+.newsletter-container button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-container button:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmation-message {
+    color: var(--hover-color);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+/*  */
+/* Footer styling */
+/*  */
+.footer-container {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2%;
+    margin: 2% auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+.footer-section h3, .footer-section h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--hover-color);
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+/* Responsiveness for different screens */
+@media (max-width: 768px) {
+    .nav-container, .featured-container, .about-container, .newsletter-container, .footer-container {
+        width: 90%;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}
