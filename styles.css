@@ -1,4 +1,3 @@
-
 /* For the styling of these pages msot of the methods and styling ahs been figured out through
 trial and error, web3 schools, stack overflow, and from previous experience doing a professional
  certificate in web development. I hope I have done a reasonable job at decribing what I am
@@ -13,11 +12,12 @@ Novemebr 2024 */
 
 /* Colour variables */
 :root {
-    --primary-color: #f9ecd2; /* Background for sections */
-    --secondary-color: #fddf9d; /* Accent colour for gradients and highlights */
+    --primary-color: #ffffff; /* Background for sections */
+    --secondary-color: #ffffff; /* Accent colour for gradients and highlights */
     --text-color: black; /* Text colour */
-    --hover-color: #2d5a15; /* Hover effect colour */
-    --shadow-color: rgba(122, 149, 91, 0.8); /* Box shadow colour */
+    --hover-color: #ddc630; /* Hover effect colour */
+    --shadow-color: rgba(228, 199, 112, 0.8); /* Box shadow colour */
+    --border-color: rgba(0, 0, 0, 1);
 }
 
 /* Global styling */
@@ -38,6 +38,18 @@ p {
     padding: 0.25%;
 }
 
+.sec {
+    width: 90%;
+    padding: 2%;
+    margin: 5% auto;
+    border: 1.5px solid var(--border-color);
+    transition: ease-in-out 0.2s;
+}
+
+.sec:hover {
+    box-shadow: var(--shadow-color) 5px 5px 35px 5px;
+}
+
 
 
 /*  */
@@ -47,23 +59,23 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
-    padding: 2%;
-    margin: 2% auto;
-    width: 84%;
-    height: auto;
-    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
-    border-radius: 10px;
+    width: 85%;
+    height: 10vh;
 }
 
 .logo-container,
 .menu-container {
-    margin: 0;
+    margin: 10px;
 }
 
 .logo {
     height: 65%;
     width: 65%;
+    transition: ease-in-out .2s;
+}
+
+.logo:hover {
+    transform: scale(1.025);
 }
 
 .menu {
@@ -87,7 +99,7 @@ p {
 }
 
 .menu a:hover {
-    border-bottom: solid var(--hover-color) 3px;
+    color: var(--hover-color);
 }
 
 .menu li:hover {
@@ -99,18 +111,40 @@ p {
 /*  */
 /* Featured container */
 /*  */
+.shopBy-container,
+.inspiration-container,
 .featured-container {
     background-color: var(--primary-color);
-    padding: 5%;
-    margin: 5% auto;
-    width: 80%;
-    height: 70vh;
-    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
-    border-radius: 10px;
+    height: 65vh;
     text-align: center;
 }
 
+.shopBy-container {
+    height: 45vh;
+}
+
+.shopBy-room-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    gap: 20px; /* Adds space between the columns */
+    justify-items: center; /* Centers the content in each grid item */
+    align-items: center; /* Vertically aligns content in each grid item */
+    width: 100%; /* Ensures the container spans its parent width */
+    max-width: 100%; /* Ensures content doesn't overflow */
+    height: auto;
+    text-align: center;
+}
+
+.shopBy-img {
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
+    transition: ease-in-out 0.3s;
+}
+
+
 /* Title styling */
+.inspo-title,
 .feat-title {
     display: flex;
     justify-content: center;
@@ -142,6 +176,7 @@ p {
     object-fit: cover;
     transition: ease-in-out 0.3s;
 }
+
 
 .feat-img:hover {
     transform: scale(1.1);
@@ -178,11 +213,6 @@ p {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 3%;
-    margin: 5% auto;
-    width: 80%;
-    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
-    border-radius: 10px;
 }
 
 .about-title {
