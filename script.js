@@ -1,3 +1,39 @@
+
+
+
+
+//*********** Creating a light and dark mode option for the website ****************/
+// Select the toggle button
+const toggleButton = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+// Check for saved user preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.replace('fa-moon', 'fa-sun'); // Switch to sun icon
+} else {
+    document.body.classList.remove('dark-mode');
+    themeIcon.classList.replace('fa-sun', 'fa-moon'); // Switch to moon icon
+}
+
+// Toggle theme and icon on button click
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.replace('fa-moon', 'fa-sun'); // Switch to sun icon
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.replace('fa-sun', 'fa-moon'); // Switch to moon icon
+    }
+});
+
+
+
+
+
 //Loading and displaying the json about file
 //Fetch the text from the json file
 document.addEventListener('DOMContentLoaded', function() {
