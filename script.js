@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //Loading and displaying the json about file
 //Fetch the text from the json file
 document.addEventListener('DOMContentLoaded', function() {
@@ -20,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 aboutSection.appendChild(p);
             });
         })
+        //Found this structure from stach overflow
+        .catch(error => {
+            console.error('Error fetching about section:', error);
+            document.getElementById('about-section').textContent = 'Failed to load about section.';
+        });
 });
 
 
@@ -126,3 +130,71 @@ document.querySelector(".contact-form form").addEventListener("submit", function
     // Reset the form after successful submission
     document.querySelector(".contact-form form").reset();
 });
+
+
+
+
+
+
+
+
+//******** */ For the shopping cart ***********//
+
+//cart data
+let cart = [
+    { id: 1, name: "Modern Lamp", price: 50.00, quantity: 1 },
+    { id: 2, name: "Desk Lamp", price: 30.00, quantity: 2 }
+];
+
+let taxRate = 0.1; // 10% tax
+let shippingCost = 5.00; // Fixed shipping cost
+
+function updateCart() {
+    const cartTable = document.getElementById('cart-table');
+    cartTable.innerHTML = ""; // Clear the table
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        // Add rows dynamically
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>$${item.price.toFixed(2)}</td>
+            <td>
+                <input type="number" value="${item.quantity}" min="1"
+                onchange="updateQuantity(${item.id}, this.value)">
+            </td>
+            <td>$${itemTotal.toFixed(2)}</td>
+            <td><button onclick="removeItem(${item.id})">Remove</button></td>
+        `;
+        cartTable.appendChild(row);
+    });
+
+    // Update price breakdown
+    const tax = subtotal * taxRate;
+    const total = subtotal + tax + shippingCost;
+
+    document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+    document.getElementById('tax').textContent = tax.toFixed(2);
+    document.getElementById('shipping').textContent = shippingCost.toFixed(2);
+    document.getElementById('total').textContent = total.toFixed(2);
+}
+
+function updateQuantity(id, quantity) {
+    const item = cart.find(item => item.id === id);
+    if (item) {
+        item.quantity = parseInt(quantity);
+        updateCart();
+    }
+}
+
+function removeItem(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCart();
+}
+
+// Initialize the cart
+updateCart();
