@@ -1,11 +1,6 @@
 //add new key=>value to the HTML5 storage
 function SaveItem(name) {
-			
-	//var name = document.forms.ShoppingList.name.value;
-	//var data = document.forms.ShoppingList.data.value;
 	localStorage.setItem(name, 1);
-	//doShowAll();
-	
 }
 //------------------------------------------------------------------------------
 //change an existing key=>value in the HTML5 storage
@@ -14,7 +9,7 @@ function ModifyItem() {
 	var data1 = document.forms.ShoppingList.data.value;
 	//check if name1 is already exists
 	
-//check if key exists
+			//check if key exists
 			if (localStorage.getItem(name1) !=null)
 			{
 			  //update
