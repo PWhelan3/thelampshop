@@ -6,7 +6,6 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="../styles.css">
-	<script src="../shop/Storage.js"></script>
 
     <!-- Theme icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -133,39 +132,36 @@
             <p>&copy; 2024 The Lamp Shop. All Rights Reserved.</p>
         </div>
     </div>
-
-    <script src="../scripts.js"></script>
-	<h2>Shopping Cart with HTML5 Storage Project</h2>
-	<p>Insert items and quantity for your shopping cart. </p>
+	<--!Test Cart
+		In use with localStorage
+		Currently set up with bedroom shop page
+		-->
 	<form name=ShoppingList>
-
-		<div id="main">
-			<table>
-				<tr>
-
-					<td><b>Item:</b><input type=text name=name></td>
-					<td><b>Quantity:</b><input type=text name=data></td>	
-
-				</tr>
-
-				<tr>
-					<td>
-					    <input type=button value="Save"   onclick="SaveItem()"> 
-					    <input type=button value="Update" onclick="ModifyItem()"> 
-					    <input type=button value="Delete" onclick="RemoveItem()">
-					</td>
-				</tr>
-			</table>
-		</div>
-
-		<div id="items_table">
-			<h3>Shopping List</h3>
-			<table id=list></table>
-			<p>
-				<label><input type=button value="Clear" onclick="ClearAll()">
-					<i>* Delete all items</i></label>
-			</p>
-		</div>
+	<div id="main">
+		<table>
+			<tr>
+				<td><b>Item:</b><input type=text name=name></td>
+				<td><b>Quantity:</b><input type=text name=data></td>	
+			</tr>
+			<tr>
+				<td>
+				    <input type=button value="Save"   onclick="SaveItem()"> 
+				    <input type=button value="Update" onclick="ModifyItem()"> 
+				    <input type=button value="Delete" onclick="RemoveItem()">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="items_table">
+		<h3>Shopping List</h3>
+		<table id=list></table>
+		<p>
+			<label><input type=button value="Clear" onclick="ClearAll()">
+				<i>* Delete all items</i></label>
+		</p>
+	</div>
 	</form>
+    <script src="../scripts.js"></script>
+	
 </body>
 </html>
