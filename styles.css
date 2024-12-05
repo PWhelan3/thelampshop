@@ -1,37 +1,80 @@
+/* We have decided to more or less keep all of the css for this project in this single css file for simplicity
+We have broken the file down into global styles for every page,
+and then separate sections for each page too.
+We have tried to separate them as well and as clearly as we could and hopefully the layout is clear! */
+
+/* Styles.css file for thelampshop
+Project by Colm Ward & Peter Whelan
+Web Design CA2
+The Lamp Shop */
+
+
+
+/*  */
+/* ********* The first section is our media queries for our global elements *****************/
+/*  */
+
+/* Responsiveness for different screens */
+@media (max-width: 768px) {
+    .nav-container, .featured-container, .about-container, .newsletter-container, .footer-container {
+        width: 90%;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/*  */
+/******************** Here are our global variables for the project  ***********************/
+/*  */
 
 /* Default Light Mode */
 :root {
-    --background-color: #ffffff;
+    --background-color: #d9d2bf;
     --text-color: black; /* Text colour */
-    --primary-color: #ffffff; /* Background for sections */
-    --secondary-color: #ffffff; /* Accent colour for gradients and highlights */
+    --primary-color: #f5f2e0; /* Background for sections */
+    --secondary-color: #f8f7f4; /* Accent colour for gradients and highlights */
     --hover-color: #ddc630; /* Hover effect colour */
-    --shadow-color: rgba(228, 199, 112, 0.8); /* Box shadow colour */
-    --border-color: rgba(0, 0, 0, 1);
+    --shadow-color: #ddc630; /* Box shadow colour */
+    --border-color: rgb(255, 255, 255);
 }
 
 /* Dark Mode */
 body.dark-mode {
-    --background-color: #121212;
+    --background-color: #1b1b1a;
     --text-color: #ffffff;
-    --primary-color: #202020;
+    --primary-color: #292623;
     --secondary-color: #171717;
-    --hover-color: #ddc630; /* Hover effect colour */
-    --shadow-color: rgba(43, 35, 14, 0.8); /* Box shadow colour */
-    --border-color: rgb(255, 255, 255);
+    --hover-color: #9c5e16; /* Hover effect colour */
+    --shadow-color: #6b5f2e; /* Box shadow colour */
+    --border-color: rgb(0, 0, 0);
 }
+
 
 .theme-button {
     background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 55px;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
 }
 
 .theme-button:hover {
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: scale(1.2);
 }
 
 /* Icon styles */
@@ -46,18 +89,6 @@ body.dark-mode {
     color: var(--text-color); /* Changes based on the mode */
 }
 
-
-
-/* Colour variables
-:root {
-    --primary-color: #ffffff; 
-    --secondary-color: #ffffff; 
-    --text-color: black;
-    --hover-color: #ddc630; 
-    --shadow-color: rgba(228, 199, 112, 0.8); 
-    --border-color: rgba(0, 0, 0, 1);
-} */
-
 /* Global styling */
 body {
     width: 100%;
@@ -65,8 +96,8 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    font-family: "Doto";
+    /* background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
     overflow-x: hidden;
     justify-content: center;
     line-height: 1.6;
@@ -75,18 +106,25 @@ body {
 /* For the about paragraph */
 p {
     padding: 0.25%;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 .sec {
-    width: 90%;
-    padding: 2%;
-    margin: 5% auto;
-    border: 1.5px solid var(--border-color);
+    background-color: var(--primary-color);
+    width: 110%;
+    border-top: .5px solid var(--border-color);
+    border-bottom: .5px solid var(--border-color);
     transition: ease-in-out 0.2s;
+    margin-bottom: 10vh;
+    padding-bottom: 1%;
 }
 
 .sec:hover {
-    box-shadow: var(--shadow-color) 5px 5px 35px 5px;
+    box-shadow: var(--shadow-color) 5px 5px 55px 5px;
 }
 
 
