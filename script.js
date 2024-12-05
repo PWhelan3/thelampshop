@@ -253,7 +253,7 @@ updateCart();
 function SaveItem(name) {
 	var currentQuantity = parseInt(localStorage.getItem(name));
 	var newQuantity = 0;
-	if currentQuantitiy.isInteger(){
+	if currentQuantity.isInteger(){
 		newQuantity = currentQuantity + 1;
 	}
 	else{
