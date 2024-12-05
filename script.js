@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             // Get the 'aboutText' array from the JSON
-            const aboutTextArray = data.aboutText;
+            const aboutTextArray = data.aboutTextJSON;
             const aboutSection = document.getElementById('about-section');
 
             // Clear the "Loading..." text
