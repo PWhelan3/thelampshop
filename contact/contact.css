@@ -4,7 +4,6 @@
 /* Contact page layout */
 /*  */
 .contact-page {
-    max-width: 800px;
     margin: 5% auto;
     padding: 20px;
     background: var(--primary-color);
