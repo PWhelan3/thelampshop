@@ -1,15 +1,13 @@
 function SaveItem(name) {
-	var currentQuantity = parseInt(localStorage.getItem(name));
-	var newQuantity = 0;
-	if (Number.isInteger(currentQuantity)){
-		newQuantity = currentQuantity + 1;
+	if(localStorage.getItem(name) == null){
+		localStorage.setItem(name, 1);
 	}
 	else{
-		newQuantity = 1;
+		var currentQuantity = parseInt(localStorage.getItem(name));
+		var newQuantity = 0;
+		newQuantity = currentQuantity + 1;
+		localStorage.setItem(name, newQuantity);
 	}
-		
-	var newQuantity = currentQuantity + 1;
-	localStorage.setItem(name, newQuantity);
 }
 //------------------------------------------------------------------------------
 //change an existing key=>value in the HTML5 storage
