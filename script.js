@@ -245,9 +245,20 @@ function removeItem(id) {
 // Initialize the cart
 updateCart();
 
+
+//---------------------------------------------------------
+
+
 //add new key=>value to the HTML5 storage
 function SaveItem(name) {
 	var currentQuantity = parseInt(localStorage.getItem(name));
+	if currentQuantitiy.isInteger(){
+		var newQuantity = currentQuantity + 1;
+	}
+	else{
+		var newQuantity = 1;
+	}
+		
 	var newQuantity = currentQuantity + 1;
 	localStorage.setItem(name, newQuantity);
 }
