@@ -1,7 +1,8 @@
 //add new key=>value to the HTML5 storage
 function SaveItem(name) {
 	var currentQuantity = localStorage.getItem(name);
-	localStorage.setItem(name, currentQuantity+1);
+	var newQuantity = currentQuantity + 1;
+	localStorage.setItem(name, newQuantity);
 }
 //------------------------------------------------------------------------------
 //change an existing key=>value in the HTML5 storage
