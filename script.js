@@ -242,7 +242,7 @@ updateCart();
 
 */
 //---------------------------------------------------------
-
+/*
 
 //add new key=>value to the HTML5 storage
 function SaveItem(name) {
@@ -316,7 +316,7 @@ function doShowAll() {
 /*
  =====> Checking the browser support
  //this step may not be required as most of modern browsers do support HTML5
- */
+ 
  //below function may be redundant
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
@@ -325,8 +325,9 @@ function CheckBrowser() {
 	} else {
 			return false;
 	}
-}
+}*/
 //-------------------------------------------------
 /*
 You can extend this script by inserting data to database or adding payment processing API to shopping cart..
 */
+
