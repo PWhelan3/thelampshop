@@ -65,11 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 aboutSection.appendChild(p);
             });
         })
-        //Found this structure from stach overflow
-        .catch(error => {
-            console.error('Error fetching about section:', error);
-            document.getElementById('about-section').textContent = 'Failed to load about section.';
-        });
 });
 
 
