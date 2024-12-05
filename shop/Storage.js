@@ -49,6 +49,7 @@ function ModifyItem() {
 //delete an existing key=>value from the HTML5 storage
 function RemoveItem(name) {
 	localStorage.removeItem(name);
+	doShowAll();
 }
 //-------------------------------------------------------------------------------------
 //restart the local storage
