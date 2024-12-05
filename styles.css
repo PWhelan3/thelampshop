@@ -115,7 +115,7 @@ a {
 
 .sec {
     background-color: var(--primary-color);
-    width: 110%;
+    width: 100%;
     border-top: .5px solid var(--border-color);
     border-bottom: .5px solid var(--border-color);
     transition: ease-in-out 0.2s;
@@ -338,10 +338,8 @@ a {
     background-color: var(--primary-color);
     padding: 5%;
     margin: 5% auto;
-    width: 80%;
     height: 30vh;
     box-shadow: var(--shadow-color) 4px 4px 14px 4px;
-    border-radius: 8px;
     text-align: center;
 }
 
@@ -402,7 +400,6 @@ a {
     text-align: center;
     padding: 2%;
     margin: 2% auto;
-    width: 80%;
     border-radius: 10px;
     box-shadow: var(--shadow-color) 4px 4px 14px 4px;
 }
