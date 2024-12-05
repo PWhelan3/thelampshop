@@ -1,7 +1,7 @@
 function SaveItem(name) {
 	var currentQuantity = parseInt(localStorage.getItem(name));
 	var newQuantity = 0;
-	if currentQuantity.isInteger(){
+	if Number.isInteger(currentQuantity){
 		newQuantity = currentQuantity + 1;
 	}
 	else{
