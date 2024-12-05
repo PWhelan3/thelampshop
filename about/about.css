@@ -1,0 +1,74 @@
+
+/* Banner Styling */
+.banner {
+    background: url('your-banner-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* About Rows */
+.about-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.about-row:nth-child(1) {
+    flex-direction: row; /* Default: Image on the left, text on the right */
+}
+
+.about-row:nth-child(0) {
+    flex-direction: row-reverse; /* Alternate: Text on the left, image on the right */
+}
+
+/* Images */
+.about-image {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+/* Text Content */
+.about-text {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-row:nth-child(even) {
+        flex-direction: column; /* Stacks both image and text for smaller screens */
+    }
+
+    .about-image, .about-text {
+        margin: 10px 0;
+    }
+}
