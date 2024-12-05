@@ -187,7 +187,7 @@ document.querySelector(".contact-form form").addEventListener("submit", function
 //******** */ For the shopping cart ***********//
 
 //cart data
-let cart = [
+/*let cart = [
     { id: 1, name: "Modern Lamp", price: 50.00, quantity: 1 },
     { id: 2, name: "Desk Lamp", price: 30.00, quantity: 2 }
 ];
@@ -245,7 +245,7 @@ function removeItem(id) {
 // Initialize the cart
 updateCart();
 
-
+*/
 //---------------------------------------------------------
 
 
