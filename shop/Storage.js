@@ -24,10 +24,8 @@ function ModifyItem() {
 }
 //-------------------------------------------------------------------------
 //delete an existing key=>value from the HTML5 storage
-function RemoveItem() {
-	var name = document.forms.ShoppingList.name.value;
-	document.forms.ShoppingList.data.value = localStorage.removeItem(name);
-	doShowAll();
+function RemoveItem(name) {
+	localStorage.removeItem(name);
 }
 //-------------------------------------------------------------------------------------
 //restart the local storage
