@@ -51,7 +51,17 @@
     <div class="cart-container sec">
         <!-- Cart Items Section -->
         <div class="cart-items sec">
-            <h2>Your Cart</h2>
+			<form name=ShoppingList>
+				<div id="items_table">
+					<h3>Your Cart</h3>
+					<table id=list></table>
+					<p>
+						<label><input type=button value="Clear" onclick="ClearAll()">
+							<i>* Delete all items</i></label>
+					</p>
+				</div>
+			</form>
+            <!--<h2>Your Cart</h2>
             <table>
                 <thead>
                     <tr>
@@ -65,7 +75,7 @@
                 <tbody id="cart-table">
                     <!-- Dynamic items will be input here -->
                 </tbody>
-            </table>
+            </table>-->
         </div>
 
         <!-- Shipping Address Section -->
@@ -141,16 +151,6 @@
             <p>&copy; 2024 The Lamp Shop. All Rights Reserved.</p>
         </div>
     </div>
-	<form name=ShoppingList>
-		<div id="items_table">
-			<h3>Your Cart</h3>
-			<table id=list></table>
-			<p>
-				<label><input type=button value="Clear" onclick="ClearAll()">
-					<i>* Delete all items</i></label>
-			</p>
-		</div>
-	</form>
     <script src="../script.js"></script>
 	<script src="../shop/Storage.js"></script>
 	
