@@ -6,6 +6,7 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="../styles.css">
+	<script src="../shop/Storage.js"></script>
 
     <!-- Theme icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -16,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
     <link rel="manifest" href="../assets/icons/site.webmanifest">
 </head>
-<body>
+<body onload="doShowAll()">
 
     <!-- Navbar -->
     <div class="first">
@@ -43,6 +44,7 @@
         <!-- Cart Items Section -->
         <div class="cart-items sec">
             <h2>Your Cart</h2>
+			<table id=list></table>
             <table>
                 <thead>
                     <tr>
