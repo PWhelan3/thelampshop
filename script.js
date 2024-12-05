@@ -252,11 +252,12 @@ updateCart();
 //add new key=>value to the HTML5 storage
 function SaveItem(name) {
 	var currentQuantity = parseInt(localStorage.getItem(name));
+	var newQuantity = 0;
 	if currentQuantitiy.isInteger(){
-		var newQuantity = currentQuantity + 1;
+		newQuantity = currentQuantity + 1;
 	}
 	else{
-		var newQuantity = 1;
+		newQuantity = 1;
 	}
 		
 	var newQuantity = currentQuantity + 1;
