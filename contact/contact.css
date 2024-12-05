@@ -95,12 +95,21 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
     color: var(--text-color);
 }
 
+.map {
+    display: block; /* Flexbox layout */
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Horizontally center items */
+    height: 100%; /* Ensure it takes the full height of its container */
+    text-align: center; /* For inline or text-based elements */
+}
+
 .map iframe {
-    width: 100%;
+    width: 650px;
     height: 250px;
     border: 0;
     margin-top: 10px;
 }
+
 
 
 
