@@ -1,20 +1,53 @@
 const productsPrice = new Map([
-  ["bedShop1", 10],
-  ["bedShop2", 20],
-  ["bedShop3", 10],
-  ["bedShop4", 30],
-  ["bedShop5", 40],
-  ["bedShop6", 45],
-  ["bedShop7", 14],
-  ["bedShop8", 16],
-  ["bedShop9", 10],
-  ["bedShop10", 8],
-  ["bedShop11", 6],
-  ["bedShop12", 89],
-  ["bedShop13", 110],
-  ["bedShop14", 90],
-  ["bedShop15", 22],
-  ["bedShop16", 5]
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["Birds Nest", 10],
+	["Black Tulip", 10],
+	["Candles Light", 10],
+	["Chandelier", 10],
+	["Constellation", 10],
+	["Diamond Ring", 10],
+	["Glowing Orbs", 10],
+	["Jetsons Steel", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10],
+	["", 10]
+  
 ]);
 function SaveItem(name) {
 	if(localStorage.getItem(name) == null){
@@ -29,7 +62,7 @@ function SaveItem(name) {
 }
 //------------------------------------------------------------------------------
 //change an existing key=>value in the HTML5 storage
-function ModifyItem() {
+/*function ModifyItem() {
 	var name1 = document.forms.ShoppingList.name.value;
 	var data1 = document.forms.ShoppingList.data.value;
 	//check if name1 is already exists
@@ -44,7 +77,7 @@ function ModifyItem() {
 		
 	
 	doShowAll();
-}
+}*/
 //-------------------------------------------------------------------------
 //delete an existing key=>value from the HTML5 storage
 function RemoveItem(name) {
@@ -68,7 +101,8 @@ function doShowAll() {
 		//for more advance feature, you can set cap on max items in the cart
 		for (i = 0; i <= localStorage.length-1; i++) {
 			key = localStorage.key(i);
-			list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€" + productsPrice.get(key)*localStorage.getItem(key)+ "</td></tr>\n";
+			list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
+				+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"++"</td></tr>\n";
 		}
 		//if no item exists in the cart
 		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n") {
