@@ -100,9 +100,10 @@ function doShowAll() {
 		var i = 0;
 		//for more advance feature, you can set cap on max items in the cart
 		for (i = 0; i <= localStorage.length-1; i++) {
-			key = localStorage.key(i);
-			list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
-				+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+"button"+"</td></tr>\n";
+			if(localStorage.key(i)!="theme"){
+				key = localStorage.key(i);
+				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
+					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+"button"+"</td></tr>\n";
 		}
 		//if no item exists in the cart
 		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n") {
