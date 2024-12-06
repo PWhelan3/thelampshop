@@ -1,14 +1,23 @@
+@import "../styles.css";
 
+
+
+
+.contact-page:hover {
+    box-shadow: var(--shadow-color) 5px 5px 55px 5px;
+}
 
 /*  */
 /* Contact page layout */
 /*  */
 .contact-page {
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
     margin: 5% auto;
     padding: 20px;
     background: var(--primary-color);
     border-radius: 10px;
-    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
 }
 
 /* Header and section headings */
@@ -20,6 +29,7 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
 
 /* Contact form */
 .contact-form {
+    max-width: 100%;
     margin-top: 20px;
 }
 
@@ -58,7 +68,7 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
 .confirmation-message {
     margin-top: 20px;
     padding: 10px;
-    background-color: #8ac571;
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -78,11 +88,11 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
 
 /* Contact info and map */
 .contact-info, .hours, .map {
+    text-align: center;
     margin-top: 30px;
     padding: 20px;
     background: var(--primary-color);
     border-radius: 8px;
-    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
 }
 
 .contact-info p, .hours p {
@@ -104,8 +114,8 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
 }
 
 .map iframe {
-    width: 650px;
-    height: 250px;
+    width: 85%;
+    height: 300px;
     border: 0;
     margin-top: 10px;
 }
