@@ -1,9 +1,9 @@
 const productsPrice = new Map([
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10],
+	["Furry Lamp", 10],
+	["Plant Lamp", 10],
+	["Box Lamp", 10],
+	["Stylish Lamp", 10],
+	["Vintage Lamp", 10],
 	["", 10],
 	["", 10],
 	["", 10],
@@ -39,14 +39,14 @@ const productsPrice = new Map([
 	["Diamond Ring", 10],
 	["Glowing Orbs", 10],
 	["Jetsons Steel", 10],
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10],
-	["", 10]
+	["Lantern", 10],
+	["Organic Steel", 10],
+	["Split Shell", 10],
+	["Iron Box", 10],
+	["Ceramic Drops", 10],
+	["Steel Half Egg", 10],
+	["Wide Discs", 10],
+	["Wood Bowl", 10]
   
 ]);
 function SaveItem(name) {
