@@ -9,6 +9,20 @@
     display: flex;
 }
 
+a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
 .banner {
     background: var(--background-color);
     color: var(--text-color);
