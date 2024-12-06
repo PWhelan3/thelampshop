@@ -1,3 +1,4 @@
+//map to store prices for each prodcut
 const productsPrice = new Map([
 	["Furry Lamp", 10],
 	["Plant Lamp", 10],
@@ -49,6 +50,8 @@ const productsPrice = new Map([
 	["Wood Bowl", 10]
   
 ]);
+
+//adds an item to the cart, increments by one if already there
 function SaveItem(name) {
 	if(localStorage.getItem(name) == null){
 		localStorage.setItem(name, 1);
@@ -60,7 +63,63 @@ function SaveItem(name) {
 		localStorage.setItem(name, newQuantity);
 	}
 }
-//------------------------------------------------------------------------------
+
+
+//delete an existing key=>value
+function RemoveItem(name) {
+	localStorage.removeItem(name);
+	doShowAll();
+}
+//-------------------------------------------------------------------------------------
+//restart the local storage
+function ClearAll() {
+	localStorage.clear();
+	doShowAll();
+}
+
+//populate cart
+function doShowAll() {
+	if (CheckBrowser()) {
+		var key = "";
+		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n";
+		var i = 0;
+		//increment through local storage
+		for (i = 0; i <= localStorage.length-1; i++) {
+			//exclude theme from light/dark mode
+			if(localStorage.key(i)!="theme"){
+				key = localStorage.key(i);
+				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
+					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+"button"+"</td></tr>\n";
+			}
+		}
+		
+		//empty cart
+		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n") {
+			list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td>\n<td><i>empty</i></td><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+		}
+		
+		//bind the data to html table
+		document.getElementById('list').innerHTML = list;
+	} else {
+		alert('Cart not supported in your browser');
+	}
+}
+
+
+//checks if browser has local storage
+function CheckBrowser() {
+	if ('localStorage' in window && window['localStorage'] !== null) {
+		// we can use localStorage object to store data
+		return true;
+	} else {
+			return false;
+	}
+}
+
+//runs doShowlAll function when script has loaded
+//changed from in html loading due to intermittent drops
+window.load=doShowAll();
+
 //change an existing key=>value in the HTML5 storage
 /*function ModifyItem() {
 	var name1 = document.forms.ShoppingList.name.value;
@@ -78,62 +137,3 @@ function SaveItem(name) {
 	
 	doShowAll();
 }*/
-//-------------------------------------------------------------------------
-//delete an existing key=>value from the HTML5 storage
-function RemoveItem(name) {
-	localStorage.removeItem(name);
-	doShowAll();
-}
-//-------------------------------------------------------------------------------------
-//restart the local storage
-function ClearAll() {
-	localStorage.clear();
-	doShowAll();
-}
-//--------------------------------------------------------------------------------------
-// dynamically populate the table with shopping list items
-//below step can be done via PHP and AJAX too. 
-function doShowAll() {
-	if (CheckBrowser()) {
-		var key = "";
-		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n";
-		var i = 0;
-		//for more advance feature, you can set cap on max items in the cart
-		for (i = 0; i <= localStorage.length-1; i++) {
-			if(localStorage.key(i)!="theme"){
-				key = localStorage.key(i);
-				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
-					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+"button"+"</td></tr>\n";
-			}
-		}
-		//if no item exists in the cart
-		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n") {
-			list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td>\n<td><i>empty</i></td><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
-		}
-		//bind the data to html table
-		//you can use jQuery too....
-		document.getElementById('list').innerHTML = list;
-	} else {
-		alert('Cannot save shopping list as your browser does not support HTML 5');
-	}
-}
-
-
-/*
- =====> Checking the browser support
- //this step may not be required as most of modern browsers do support HTML5
- */
- //below function may be redundant
-function CheckBrowser() {
-	if ('localStorage' in window && window['localStorage'] !== null) {
-		// we can use localStorage object to store data
-		return true;
-	} else {
-			return false;
-	}
-}
-window.load=doShowAll();
-//-------------------------------------------------
-/*
-You can extend this script by inserting data to database or adding payment processing API to shopping cart..
-*/
