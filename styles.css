@@ -548,7 +548,6 @@ a {
     text-align: center;
     padding: 2%;
     margin: 2% auto;
-    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
 }
 
 .footer-content {
