@@ -104,6 +104,7 @@ function doShowAll() {
 				key = localStorage.key(i);
 				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
 					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+"button"+"</td></tr>\n";
+			}
 		}
 		//if no item exists in the cart
 		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n") {
