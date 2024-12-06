@@ -27,14 +27,14 @@ h2 {
     align-content: center;
     position: relative;
     overflow: hidden;
-    max-width: 80%
+    max-width: 90%
 }
 
 /* Slider */
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth transition */
-    gap: 10px; /* Space between images */
+    gap: 40px; /* Space between images */
 }
 
 /* Images inside the slider */
