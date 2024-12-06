@@ -1,5 +1,14 @@
 @import "../styles.css";
 
+.hidden {
+    display: none;
+    transition: ease-in-out 0.2s;
+}
+
+.slider-container:hover .hidden{
+    display: flex;
+}
+
 .banner {
     background: var(--background-color);
     color: var(--text-color);
