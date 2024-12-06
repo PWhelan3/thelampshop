@@ -85,11 +85,15 @@ function doShowAll() {
 		var i = 0;
 		//increment through local storage
 		for (i = 0; i <= localStorage.length-1; i++) {
+			key = localStorage.key(i);
 			//exclude theme from light/dark mode
-			if(localStorage.key(i)!="theme"){
-				key = localStorage.key(i);
-				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
-					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+ "button" +"</td></tr>\n";
+			if(key!="theme"){
+				
+				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"
+					+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
+					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"
+					+ "<label><input type=button value=\"Clear\" onclick=\"RemoveItem(key)\"></label>"
+					+"</td></tr>\n";
 			}
 		}
 		
