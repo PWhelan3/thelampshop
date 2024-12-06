@@ -340,7 +340,6 @@ a {
 /* Featured container */
 /*  */
 .shopBy-container,
-.inspiration-container,
 .featured-container {
     background-color: var(--primary-color);
     height: 65vh;
@@ -378,7 +377,6 @@ a {
 
 
 /* Title styling */
-.inspo-title,
 .feat-title {
     display: flex;
     justify-content: center;
