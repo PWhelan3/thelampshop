@@ -89,7 +89,7 @@ function doShowAll() {
 			if(localStorage.key(i)!="theme"){
 				key = localStorage.key(i);
 				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
-					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+"button"+"</td></tr>\n";
+					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"+ <input type=button value="Clear" onclick="RemoveItem(localStorage.key(i))"> +"</td></tr>\n";
 			}
 		}
 		
