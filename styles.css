@@ -133,6 +133,39 @@ a {
 
 
 
+
+
+/*  */
+/* ************* Sale Banner ****************** */
+/*  */
+.sale-banner {
+    position: relative; /* Allows layering for the overlay */
+    background-image: url('https://images.stockcake.com/public/3/b/6/3b673e66-040c-45a3-bdfc-167e55aa8f73_large/cozy-reading-spot-stockcake.jpg'); /* Replace with your image path */
+    background-size: cover; /* Makes the image cover the entire banner */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Ensures no tiling of the image */
+}
+
+.sale-banner1 {
+    font-size: 5rem;
+    font-family: "Mea Culpa";
+    text-align: center;
+    color: rgb(246, 242, 219);
+}
+
+.sale-banner2 {
+    font-size: 6rem;
+    font-family: "Mea Culpa";
+    text-align: center;
+    color: rgb(246, 242, 219);
+}
+
+
+
+
+
+
+
 /*  */
 /* Navbar styling */
 /*  */
