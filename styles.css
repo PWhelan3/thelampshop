@@ -123,7 +123,8 @@ a {
     border-bottom: .5px solid var(--border-color);
     transition: ease-in-out 0.2s;
     margin-bottom: 10vh;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 5%;
 }
 
 .sec:hover {
