@@ -65,7 +65,7 @@ h2 {
     width: 40vh; /* Adjust size as needed */
     height: 40vh;
     border-radius: 5px;
-    
+    object-fit: cover;
 }
 
 /* Navigation buttons */
