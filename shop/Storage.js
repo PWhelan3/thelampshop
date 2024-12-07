@@ -82,7 +82,7 @@ function doShowAll() {
 	if (CheckBrowser()) {
 		var key = "";
 		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n";
-		var dropDown="";
+		var dropDown="<option value=item>Item</option>";
 		var i = 0;
 		//increment through local storage
 		for (i = 0; i <= localStorage.length-1; i++) {
@@ -100,6 +100,7 @@ function doShowAll() {
 		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n") {
 			list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
 		}
+		//if(
 		
 		//bind the data to html table
 		document.getElementById('list').innerHTML=list;
