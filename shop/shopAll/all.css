@@ -1,6 +1,9 @@
 
 @import "../../styles.css";
 
+h1 {
+    align-text: center;
+}
 
 .sec {
     width: 100%;
