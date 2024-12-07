@@ -81,24 +81,18 @@ function ClearAll() {
 function doShowAll() {
 	if (CheckBrowser()) {
 		var key = "";
-		//var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th><th>Action</th></tr>\n";
 		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n";
+		var dropDown="";
 		var i = 0;
 		//increment through local storage
 		for (i = 0; i <= localStorage.length-1; i++) {
 			key = localStorage.key(i);
 			//exclude theme from light/dark mode
 			if(key!="theme"){
-				
-				/*list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"
-					+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
-					+ productsPrice.get(key)*localStorage.getItem(key)+"</td>\n<td>"
-					+ "<label><input type=button value=\"Clear\" onclick=\"RemoveItem(key)\"></label>"
-					+"</td></tr>\n";*/
-				
 				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"
 					+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
 					+ productsPrice.get(key)*localStorage.getItem(key)+"</td></tr>\n";
+				dropDown+="<option value=" + key + ">"+key+"</option>";
 			}
 		}
 		
@@ -108,7 +102,8 @@ function doShowAll() {
 		}
 		
 		//bind the data to html table
-		document.getElementById('list').innerHTML = list;
+		document.getElementById('list').innerHTML=list;
+		document.getElementById('dropDown').innerHTML=dropDown;
 	} else {
 		alert('Cart not supported in your browser');
 	}
