@@ -5,11 +5,6 @@ h1 {
     align-text: center;
 }
 
-.room-container {
-    display: flex;
-    justify-content: center;
-}
-
 .sec {
     width: 100%;
     background-color: var(--primary-color);
