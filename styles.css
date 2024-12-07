@@ -546,8 +546,8 @@ a {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
-    padding: 2%;
-    margin: 2% auto;
+    padding: 2% 2% 0% 2%;
+    margin: 2% auto 0% auto;
 }
 
 .footer-content {
