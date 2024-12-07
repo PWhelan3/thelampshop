@@ -82,7 +82,7 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: "Doto";
+    font-family: "Source Code Pro", monospace;
     /* background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
     overflow-x: hidden;
     justify-content: center;
