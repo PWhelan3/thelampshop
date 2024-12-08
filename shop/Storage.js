@@ -117,6 +117,9 @@ function doShowAll() {
 		
 		//bind the data to html table
 		document.getElementById('subtotal').innerHTML=subtotal;
+		document.getElementById('tax').innerHTML=tax;
+		document.getElementById('shipping').innerHTML=shipping;
+		document.getElementById('total').innerHTML=total;
 		document.getElementById('list').innerHTML=list;
 		//document.getElementById('dropDown').innerHTML=dropDown;
 	} else {
@@ -139,20 +142,3 @@ function CheckBrowser() {
 //changed from in html loading due to intermittent drops
 window.load=doShowAll();
 
-//change an existing key=>value in the HTML5 storage
-/*function ModifyItem() {
-	var name1 = document.forms.ShoppingList.name.value;
-	var data1 = document.forms.ShoppingList.data.value;
-	//check if name1 is already exists
-	
-			//check if key exists
-			if (localStorage.getItem(name1) !=null)
-			{
-			  //update
-			  localStorage.setItem(name1,data1);
-			  document.forms.ShoppingList.data.value = localStorage.getItem(name1);
-			}
-		
-	
-	doShowAll();
-}*/
