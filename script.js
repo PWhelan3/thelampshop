@@ -165,11 +165,13 @@ document.querySelector(".contact-form form").addEventListener("submit", function
     }
 
     // If validation passes, show confirmation message
-    confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
-    document.querySelector(".contact-form").appendChild(confirmationMessage); // Append message to the form
+	document.querySelector(".contact-form form").reset();
+	window.location.href = 'confirmation.html';
+    //confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
+    //document.querySelector(".contact-form").appendChild(confirmationMessage); // Append message to the form
 
     // Reset the form after successful submission
-    document.querySelector(".contact-form form").reset();
+    //document.querySelector(".contact-form form").reset();
 });
 
 
