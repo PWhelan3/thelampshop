@@ -1,4 +1,6 @@
-//For signing up to the newsletter
+//Contact form validation and confirmation message
+
+
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
