@@ -106,10 +106,10 @@ function doShowAll() {
 		taxNum = subtotalNum*0.23;
 		shippingNum=5.00;
 		totalNum=subtotalNum+taxNum+shippingNum;
-		var subtotal=subtotalNum.toString(2);
-		var tax = taxNum.toString(2);
-		var shipping=shippingNum.toString(2);
-		var total=totalNum.toString(2);
+		var subtotal=subtotalNum.toFixed(2);
+		var tax = taxNum.toFixed(2);
+		var shipping=shippingNum.toFixed(2);
+		var total=totalNum.toFixed(2);
 		
 		//empty cart
 		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n") {
