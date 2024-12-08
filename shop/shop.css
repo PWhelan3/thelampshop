@@ -62,7 +62,7 @@ h2 {
 
 /* Images inside the slider */
 .slider img {
-    width: 40vh; /* Adjust size as needed */
+    width: 40vh; 
     height: 40vh;
     border-radius: 5px;
     object-fit: cover;
