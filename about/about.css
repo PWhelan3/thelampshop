@@ -1,7 +1,8 @@
+@import "../styles.css";
+
 
 /* Banner Styling */
 .banner {
-    background: url('your-banner-image.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -24,11 +25,11 @@
 }
 
 .about-row:nth-child(1) {
-    flex-direction: row; /* Default: Image on the left, text on the right */
+    flex-direction: row; /* Image on the left, text on the right */
 }
 
 .about-row:nth-child(0) {
-    flex-direction: row-reverse; /* Alternate: Text on the left, image on the right */
+    flex-direction: row-reverse; /* Text on the left, image on the right */
 }
 
 /* Images */
@@ -57,7 +58,7 @@
     color: #666;
 }
 
-/* Responsive Design */
+/* Responsiveness */
 @media (max-width: 768px) {
     .about-row {
         flex-direction: column;
