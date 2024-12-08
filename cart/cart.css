@@ -1,10 +1,19 @@
+@import "../styles.css";
+
+
+/* separate body styling  */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Source Code Pro", monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.sec {
+    border: 1px solid var(--text-color);
+}
+
+/* Container styling */
 .cart-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -19,7 +28,7 @@ body {
 }
 
 .right-section {
-    background: #f9f9f9;
+    background: var(--background-color);
     padding: 20px;
     border-radius: 5px;
 }
@@ -40,7 +49,7 @@ th, td {
 }
 
 .price-breakdown, .payment-section, .shipping-address {
-    background: #f9f9f9;
+    background: var(--primary-color);
     padding: 20px;
     border-radius: 5px;
 }
