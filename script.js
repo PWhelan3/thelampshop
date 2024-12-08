@@ -166,7 +166,7 @@ document.querySelector(".contact-form form").addEventListener("submit", function
 
     // If validation passes, show confirmation message
 	//document.querySelector(".contact-form form").reset();
-	window.location.href = 'confirmation.html';
+	window.location.href = 'https://html-preview.github.io/?url=https://raw.githubusercontent.com/PWhelan3/thelampshop/main/contact/confirmation.html';
     //confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
     //document.querySelector(".contact-form").appendChild(confirmationMessage); // Append message to the form
 
