@@ -27,34 +27,49 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
     text-align: center;
 }
 
-/* Contact form */
+/* Contact Form Container */
 .contact-form {
-    max-width: 100%;
-    margin-top: 20px;
+    background-color: var(--primary-color);
+    padding: 5%;
+    margin: 5% auto;
+    max-width: 600px;
+    box-shadow: var(--shadow-color) 4px 4px 14px 4px;
+    text-align: center;
+    border-radius: 8px;
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form label {
-    font-weight: bold;
+/* Heading and Paragraph Styles */
+.contact-form h2 {
+    margin-bottom: 10px;
     color: var(--text-color);
 }
 
-.contact-form input, .contact-form select, .contact-form textarea {
+.contact-form p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Input, Select, and Textarea Styles */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
     padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--text-color);
     border-radius: 4px;
-    border: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
+/* Submit Button */
 .contact-form button {
-    padding: 10px;
-    color: var(--text-color);
     background-color: var(--secondary-color);
+    color: var(--text-color);
     border: none;
+    padding: 10px 15px;
+    font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -62,7 +77,25 @@ header h1, header p, .contact-form h2, .contact-info h2, .map h2, .hours h2 {
 
 .contact-form button:hover {
     background-color: var(--hover-color);
+    color: var(--primary-color);
 }
+
+/* Confirmation Message */
+.contact-form .confirmation-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Hide the message until submitted */
+.hidden {
+    display: none;
+}
+
 
 /* Trying to add confrimation message for when form is submitted */
 .confirmation-message {
