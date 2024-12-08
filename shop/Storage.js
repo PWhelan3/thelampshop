@@ -68,22 +68,16 @@ function SaveItem(name) {
 	}
 }
 
-
-//delete an existing key=>value
-function RemoveItem(name) {
-	localStorage.removeItem(name);
-	doShowAll();
-}
-//-------------------------------------------------------------------------------------
 //restart the local storage
 function ClearAll() {
 	localStorage.clear();
 	doShowAll();
 }
 
-//populate cart
+//populate cart and calculate totals 
 function doShowAll() {
 	if (CheckBrowser()) {
+		//variables
 		var subtotalNum=0.00;
 		var taxNum = 0.00;
 		var shippingNum = 0.00;
@@ -91,9 +85,11 @@ function doShowAll() {
 		var key = "";
 		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n";
 		var i = 0;
+		
 		//increment through local storage
 		for (i = 0; i <= localStorage.length-1; i++) {
 			key = localStorage.key(i);
+			
 			//exclude theme from light/dark mode
 			if(key!="theme"){
 				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"
@@ -123,7 +119,6 @@ function doShowAll() {
 		document.getElementById('shipping').innerHTML=shipping;
 		document.getElementById('total').innerHTML=total;
 		document.getElementById('list').innerHTML=list;
-		//document.getElementById('dropDown').innerHTML=dropDown;
 	} else {
 		alert('Cart not supported in your browser');
 	}
@@ -143,4 +138,3 @@ function CheckBrowser() {
 //runs doShowlAll function when script has loaded
 //changed from in html loading due to intermittent drops
 window.load=doShowAll();
-
