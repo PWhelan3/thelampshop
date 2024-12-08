@@ -94,28 +94,3 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
     //clear the form
     document.getElementById("newsletter-form").reset();
 });
-
-
-
-// //Loading and displaying the json about file
-// //Fetch the text from the json file
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Fetch the content from the JSON file
-//     fetch('about/about.json')
-//         .then(response => response.json())
-//         .then(data => {
-//             // Get the 'aboutText' array from the JSON
-//             const aboutTextArray = data.aboutTextJSON;
-//             const aboutSection = document.getElementById('about-section');
-
-//             // Clear the "Loading..." text
-//             aboutSection.innerHTML = '';
-
-//             // Loop through each paragraph and create a <p> element
-//             aboutTextArray.forEach(paragraph => {
-//                 const p = document.createElement('p');
-//                 p.textContent = paragraph;
-//                 aboutSection.appendChild(p);
-//             });
-//         })
-// });
