@@ -97,7 +97,7 @@ function doShowAll() {
 					+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
 					+ productsPrice.get(key)*localStorage.getItem(key)+"</td></tr>\n";
 				//dropDown+="<option value=" + key + ">"+key+"</option>";
-				subtotal=subtotal+(productsPrice.get(key)*localStorage.getItem(key);
+				subtotal=subtotal+(productsPrice.get(key)*localStorage.getItem(key));
 			}
 		}
 		tax = subtotal*0.23;
