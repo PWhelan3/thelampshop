@@ -183,7 +183,7 @@ a {
     box-sizing: border-box; /* Ensures padding is part of total width */
 }
 
-.cart-container {
+.cart-icon-container {
     position: relative; /* Position relative to container */
     display: flex;
     align-items: center;
