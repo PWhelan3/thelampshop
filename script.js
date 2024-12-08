@@ -122,32 +122,26 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
 });
 
 
-//Basically the same as above form validation except some extra inputs and tried to add confirmation message
-// For the contact form validation
-//document.querySelector(".contact-form form").addEventListener("submit", function(event) {
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-	event.preventDefault();  // Prevent default form submission
 
-    // Get values from the form inputs
+
+
+
+
+
+//For contact form
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
     const nameInput = document.getElementById("name").value.trim();
     const emailInput = document.getElementById("email").value.trim();
     const subjectInput = document.getElementById("subject").value;
     const messageInput = document.getElementById("message").value.trim();
-
-    // Create a confirmation message element
-    //const confirmationMessage = document.createElement("p");
-    //confirmationMessage.classList.add("confirmation-message");
+    const confirmationMessage = document.getElementById("contact-confirmation-message"); // Corrected ID
 
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Clear any previous confirmation message
-    const existingConfirmation = document.querySelector(".confirmation-message");
-    if (existingConfirmation) {
-        existingConfirmation.remove();
-    }
-
-    // Validate the inputs
+    // Validate inputs
     if (nameInput === "") {
         alert("Please enter your name.");
         return;
@@ -165,12 +159,69 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         return;
     }
 
-    // If validation passes, show confirmation message
-	//document.querySelector(".contact-form form").reset();
-	window.location.href = 'https://html-preview.github.io/?url=https://raw.githubusercontent.com/PWhelan3/thelampshop/main/contact/confirmation.html';
-    //confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
-    //document.querySelector(".contact-form").appendChild(confirmationMessage); // Append message to the form
+    // Show confirmation message
+    confirmationMessage.classList.remove("hidden");
+    confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
 
-    // Reset the form after successful submission
-    //document.querySelector(".contact-form form").reset();
+    // Clear the form
+    document.getElementById("contact-form").reset();
 });
+
+
+
+
+
+
+
+// //Basically the same as above form validation except some extra inputs and tried to add confirmation message
+// // For the contact form validation
+// //document.querySelector(".contact-form form").addEventListener("submit", function(event) {
+// document.getElementById("contact-form").addEventListener("submit", function(event) {
+// 	event.preventDefault();  // Prevent default form submission
+
+//     // Get values from the form inputs
+//     const nameInput = document.getElementById("name").value.trim();
+//     const emailInput = document.getElementById("email").value.trim();
+//     const subjectInput = document.getElementById("subject").value;
+//     const messageInput = document.getElementById("message").value.trim();
+
+//     // Create a confirmation message element
+//     //const confirmationMessage = document.createElement("p");
+//     //confirmationMessage.classList.add("confirmation-message");
+
+//     // Email validation regex
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+//     // Clear any previous confirmation message
+//     const existingConfirmation = document.querySelector(".confirmation-message");
+//     if (existingConfirmation) {
+//         existingConfirmation.remove();
+//     }
+
+//     // Validate the inputs
+//     if (nameInput === "") {
+//         alert("Please enter your name.");
+//         return;
+//     }
+//     if (!emailRegex.test(emailInput)) {
+//         alert("Please enter a valid email address.");
+//         return;
+//     }
+//     if (subjectInput === "") {
+//         alert("Please select a subject.");
+//         return;
+//     }
+//     if (messageInput === "") {
+//         alert("Please enter a message.");
+//         return;
+//     }
+
+//     // If validation passes, show confirmation message
+// 	//document.querySelector(".contact-form form").reset();
+// 	window.location.href = 'https://html-preview.github.io/?url=https://raw.githubusercontent.com/PWhelan3/thelampshop/main/contact/confirmation.html';
+//     //confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
+//     //document.querySelector(".contact-form").appendChild(confirmationMessage); // Append message to the form
+
+//     // Reset the form after successful submission
+//     //document.querySelector(".contact-form form").reset();
+// });
