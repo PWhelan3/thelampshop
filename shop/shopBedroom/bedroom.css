@@ -1,8 +1,30 @@
 
 @import "../../styles.css";
 
+h1 {
+    text-align: center;
+}
+
+.room-container {
+    display: block;
+    justify-content: center;
+}
+
+.top-sec {
+    display: flex;
+}
+
+.feat-title {
+    max-height: 8vh;
+}
+
+.featured-title {
+    margin: 0% 5% 0% -12.5%;
+    height: 2vh;
+}
 
 .sec {
+    text-align: center;
     width: 100%;
     background-color: var(--primary-color);
 }
@@ -10,7 +32,7 @@
 /* Style for the button container to make sure the button is properly spaced */
 .back-button-container {
     padding: 2%;
-    margin: 0px 0px 20px 20px;
+    margin: 0px 0px 0px 0px;
     position: fixed; /* Make it fixed on the screen */
     top: 20px; /* Add a gap to the top */
     left: 20px; /* Add a gap to the left */
@@ -19,7 +41,8 @@
 
 /* Style for the go-back-button */
 .go-back-button {
-    margin: 0px 0px 90px 70px;
+    width: 200px;
+    margin: 30px 0px 0px 50px;
     background-color: var(--primary-color); /* Match the background color to the sec section */
     color: var(--text-color); /* Ensure the text color is legible */
     border: 1px solid var(--secondary-color); /* Optional: add border if desired */
