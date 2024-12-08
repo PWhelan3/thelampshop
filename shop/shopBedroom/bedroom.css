@@ -33,40 +33,39 @@ h1 {
 .back-button-container {
     padding: 2%;
     margin: 0px 0px 0px 0px;
-    position: fixed; /* Make it fixed on the screen */
-    top: 20px; /* Add a gap to the top */
-    left: 20px; /* Add a gap to the left */
-    z-index: 100; /* Ensure it stays on top */
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 100; 
 }
 
 /* Style for the go-back-button */
 .go-back-button {
     width: 200px;
     margin: 30px 0px 0px 50px;
-    background-color: var(--primary-color); /* Match the background color to the sec section */
-    color: var(--text-color); /* Ensure the text color is legible */
-    border: 1px solid var(--secondary-color); /* Optional: add border if desired */
-    border-radius: 5px; /* Smooth rounded corners */
-    padding: 10px 20px; /* Add padding to make the button more clickable */
-    font-size: 1rem; /* Set a font size */
+    background-color: var(--primary-color); 
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color); 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
     display: inline-block;
     text-align: center;
-    transition: 0.3s ease, color 0.3s ease; /* Optional: smooth hover transition */
+    transition: 0.3s ease, color 0.3s ease; 
 }
 
-/* Remove the underline from the link */
+
 .go-back-button a {
     text-decoration: none; /* Remove default link styling */
     color: inherit; /* Make the link text inherit color from the parent button */
 }
 
-/* Optional: Hover effects to change button color */
+
 .go-back-button:hover {
     background-color: var(--hover-color); /* Change background color on hover */
     color: var(--primary-color); /* Change text color on hover */
 }
 
-/* Optional: Adjust the button position when screen size is smaller */
 @media (max-width: 768px) {
     .back-button-container {
         top: 10px; /* Reduce the gap from top for smaller screens */
