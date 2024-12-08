@@ -84,10 +84,10 @@ function ClearAll() {
 //populate cart
 function doShowAll() {
 	if (CheckBrowser()) {
-		var subtotal=0.00;
-		var tax = 0.00;
-		var shipping = 0.00;
-		var total = 0.00;
+		var subtotalNum=0.00;
+		var taxNum = 0.00;
+		var shippingNum = 0.00;
+		var totalNum = 0.00;
 		var key = "";
 		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n";
 		//var dropDown="<option value=item>Item</option>";
@@ -101,17 +101,17 @@ function doShowAll() {
 					+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
 					+ productsPrice.get(key)*localStorage.getItem(key)+"</td></tr>\n";
 				//dropDown+="<option value=" + key + ">"+key+"</option>";
-				subtotal=subtotal+(productsPrice.get(key)*localStorage.getItem(key));
+				subtotalNum=subtotalNum+(productsPrice.get(key)*localStorage.getItem(key));
 			}
 		}
 		
-		tax = subtotal*0.23;
-		shipping=5.00;
-		total=subtotal+tax+shipping;
-		subtotal.toString(2);
-		tax.toString(2);
-		shipping.toString(2);
-		total.toString(2);
+		taxNum = subtotalNum*0.23;
+		shippingNum=5.00;
+		totalNum=subtotalNum+taxNum+shippingNum;
+		var subtotal=subtotalNum.toString(2);
+		var tax = taxNum.toString(2);
+		var shipping=shippingNum.toString(2);
+		var total=totalNum.toString(2);
 		
 		//empty cart
 		if (list == "<tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n") {
