@@ -90,7 +90,6 @@ function doShowAll() {
 		var totalNum = 0.00;
 		var key = "";
 		var list = " <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr>\n";
-		//var dropDown="<option value=item>Item</option>";
 		var i = 0;
 		//increment through local storage
 		for (i = 0; i <= localStorage.length-1; i++) {
@@ -100,7 +99,6 @@ function doShowAll() {
 				list += "<tr><td>" + key + "</td>\n<td>"+ "€"+productsPrice.get(key) +"</td>\n<td>"
 					+ localStorage.getItem(key) +"</td>\n<td>"+ "€"
 					+ productsPrice.get(key)*localStorage.getItem(key)+"</td></tr>\n";
-				//dropDown+="<option value=" + key + ">"+key+"</option>";
 				subtotalNum=subtotalNum+(productsPrice.get(key)*localStorage.getItem(key));
 			}
 		}
