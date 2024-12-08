@@ -124,8 +124,9 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
 
 //Basically the same as above form validation except some extra inputs and tried to add confirmation message
 // For the contact form validation
-document.querySelector(".contact-form form").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent default form submission
+//document.querySelector(".contact-form form").addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+	event.preventDefault();  // Prevent default form submission
 
     // Get values from the form inputs
     const nameInput = document.getElementById("name").value.trim();
