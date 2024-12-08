@@ -257,7 +257,7 @@ a {
 }
 
 .logo {
-    height: 7.55vh; /* Adjusted for better scaling */
+    height: 8vh; /* Adjusted for better scaling */
     width: 5vw; /* Keeps aspect ratio intact */
     transition: ease-in-out 0.2s;
 }
