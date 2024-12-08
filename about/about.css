@@ -32,6 +32,15 @@
     flex-direction: row-reverse; /* Text on the left, image on the right */
 }
 
+/* Gif styling */
+.about-gif-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+    padding: 0 30px 0 30px;
+}
+
 /* Images */
 .about-image {
     flex: 1;
