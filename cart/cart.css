@@ -7,9 +7,21 @@ body {
 
 .cart-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
     padding: 20px;
+}
+
+.left-section {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Stacks cart, shipping address, and payment method */
+    gap: 20px;
+}
+
+.right-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 h2 {
