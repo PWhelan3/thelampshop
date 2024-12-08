@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
 }
 
-.sec {
+.cart-container, .sec {
     border: 1px solid var(--text-color);
 }
 
