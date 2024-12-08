@@ -11,6 +11,7 @@ h1 {
 }
 
 .sec {
+    text-align: center;
     width: 100%;
     background-color: var(--primary-color);
 }
