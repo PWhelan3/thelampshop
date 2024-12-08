@@ -100,6 +100,7 @@ function doShowAll() {
 				subtotal=subtotal+(productsPrice.get(key)*localStorage.getItem(key));
 			}
 		}
+		
 		tax = subtotal*0.23;
 		shipping=5.00;
 		total=subtotal+tax+shipping;
@@ -115,7 +116,7 @@ function doShowAll() {
 		
 		
 		//bind the data to html table
-		document.getElementById(subtotal).innerHTML=subtotal;
+		document.getElementById('subtotal').innerHTML=subtotal;
 		document.getElementById('list').innerHTML=list;
 		//document.getElementById('dropDown').innerHTML=dropDown;
 	} else {
