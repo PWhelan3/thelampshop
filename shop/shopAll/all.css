@@ -1,6 +1,8 @@
-
+/* Import Main Styles */
 @import "../../styles.css";
 
+
+/* General Stylings */
 h1 {
     text-align: center;
 }
@@ -43,15 +45,15 @@ h1 {
 .go-back-button {
     width: 200px;
     margin: 30px 0px 0px 50px;
-    background-color: var(--primary-color); /* Match the background color to the sec section */
+    background-color: var(--primary-color);
     color: var(--text-color); /* Ensure the text color is legible */
-    border: 1px solid var(--secondary-color); /* Optional: add border if desired */
-    border-radius: 5px; /* Smooth rounded corners */
-    padding: 10px 20px; /* Add padding to make the button more clickable */
-    font-size: 1rem; /* Set a font size */
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
     display: inline-block;
     text-align: center;
-    transition: 0.3s ease, color 0.3s ease; /* Optional: smooth hover transition */
+    transition: 0.3s ease, color 0.3s ease;
 }
 
 /* Remove the underline from the link */
@@ -66,7 +68,7 @@ h1 {
     color: var(--primary-color); /* Change text color on hover */
 }
 
-/* Optional: Adjust the button position when screen size is smaller */
+/* Adjust the button position when screen size is smaller */ 
 @media (max-width: 768px) {
     .back-button-container {
         top: 10px; /* Reduce the gap from top for smaller screens */
