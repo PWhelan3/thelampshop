@@ -70,32 +70,28 @@
             <p>We're here to help with any of your inquiries, orders, or for some friendly lighting advice!</p>
         </header>
 
-        <section class="contact-form">
-		
+        <section id="contact-form-sec" class="contact-form">
             <h2>Contact Form</h2>
-            <p id="confirmation-message" class="hidden">Thank you for for getting in touch! We'll do our best to get back to you shortly!</p>
-            <form id="contact-form>
+            <p id="contact-confirmation-message" class="hidden">Thank you for getting in touch! We'll do our best to get back to you shortly!</p>
+            <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Please input your full name...">
-
+        
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required placeholder="Please input your email...">
-
+        
                 <label for="subject">Subject:</label>
                 <select id="subject" name="subject">
                     <option value="inquiry">General Inquiry</option>
                     <option value="order">Order Issue</option>
                     <option value="feedback">Feedback</option>
                 </select>
-
+        
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required placeholder="Please provide any additional information..."></textarea>
-
+        
                 <button type="submit">Submit</button>
-
             </form>
-
-
         </section>
 
         <!-- Contact info below form -->
