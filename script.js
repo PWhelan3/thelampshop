@@ -134,8 +134,8 @@ document.querySelector(".contact-form form").addEventListener("submit", function
     const messageInput = document.getElementById("message").value.trim();
 
     // Create a confirmation message element
-    const confirmationMessage = document.createElement("p");
-    confirmationMessage.classList.add("confirmation-message");
+    //const confirmationMessage = document.createElement("p");
+    //confirmationMessage.classList.add("confirmation-message");
 
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -165,7 +165,7 @@ document.querySelector(".contact-form form").addEventListener("submit", function
     }
 
     // If validation passes, show confirmation message
-	document.querySelector(".contact-form form").reset();
+	//document.querySelector(".contact-form form").reset();
 	window.location.href = 'confirmation.html';
     //confirmationMessage.textContent = `Thank you, ${nameInput}, for contacting us! We will get back to you soon.`;
     //document.querySelector(".contact-form").appendChild(confirmationMessage); // Append message to the form
@@ -173,163 +173,3 @@ document.querySelector(".contact-form form").addEventListener("submit", function
     // Reset the form after successful submission
     //document.querySelector(".contact-form form").reset();
 });
-
-
-
-
-
-
-
-
-//******** */ For the shopping cart ***********//
-
-//cart data
-/*let cart = [
-    { id: 1, name: "Modern Lamp", price: 50.00, quantity: 1 },
-    { id: 2, name: "Desk Lamp", price: 30.00, quantity: 2 }
-];
-
-let taxRate = 0.1; // 10% tax
-let shippingCost = 5.00; // Fixed shipping cost
-
-function updateCart() {
-    const cartTable = document.getElementById('cart-table');
-    cartTable.innerHTML = ""; // Clear the table
-    let subtotal = 0;
-
-    cart.forEach(item => {
-        const itemTotal = item.price * item.quantity;
-        subtotal += itemTotal;
-
-        // Add rows dynamically
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.name}</td>
-            <td>$${item.price.toFixed(2)}</td>
-            <td>
-                <input type="number" value="${item.quantity}" min="1"
-                onchange="updateQuantity(${item.id}, this.value)">
-            </td>
-            <td>$${itemTotal.toFixed(2)}</td>
-            <td><button onclick="removeItem(${item.id})">Remove</button></td>
-        `;
-        cartTable.appendChild(row);
-    });
-
-    // Update price breakdown
-    const tax = subtotal * taxRate;
-    const total = subtotal + tax + shippingCost;
-
-    document.getElementById('subtotal').textContent = subtotal.toFixed(2);
-    document.getElementById('tax').textContent = tax.toFixed(2);
-    document.getElementById('shipping').textContent = shippingCost.toFixed(2);
-    document.getElementById('total').textContent = total.toFixed(2);
-}
-
-function updateQuantity(id, quantity) {
-    const item = cart.find(item => item.id === id);
-    if (item) {
-        item.quantity = parseInt(quantity);
-        updateCart();
-    }
-}
-
-function removeItem(id) {
-    cart = cart.filter(item => item.id !== id);
-    updateCart();
-}
-
-// Initialize the cart
-updateCart();
-
-*/
-//---------------------------------------------------------
-/*
-
-//add new key=>value to the HTML5 storage
-function SaveItem(name) {
-	var currentQuantity = parseInt(localStorage.getItem(name));
-	var newQuantity = 0;
-	if currentQuantity.isInteger(){
-		newQuantity = currentQuantity + 1;
-	}
-	else{
-		newQuantity = 1;
-	}
-		
-	var newQuantity = currentQuantity + 1;
-	localStorage.setItem(name, newQuantity);
-}
-//------------------------------------------------------------------------------
-//change an existing key=>value in the HTML5 storage
-function ModifyItem() {
-	var name1 = document.forms.ShoppingList.name.value;
-	var data1 = document.forms.ShoppingList.data.value;
-	//check if name1 is already exists
-	
-			//check if key exists
-			if (localStorage.getItem(name1) !=null)
-			{
-			  //update
-			  localStorage.setItem(name1,data1);
-			  document.forms.ShoppingList.data.value = localStorage.getItem(name1);
-			}
-		
-	
-	doShowAll();
-}
-//-------------------------------------------------------------------------
-//delete an existing key=>value from the HTML5 storage
-function RemoveItem(name) {
-	localStorage.removeItem(name);
-}
-//-------------------------------------------------------------------------------------
-//restart the local storage
-function ClearAll() {
-	localStorage.clear();
-	doShowAll();
-}
-//--------------------------------------------------------------------------------------
-// dynamically populate the table with shopping list items
-//below step can be done via PHP and AJAX too. 
-function doShowAll() {
-	if (CheckBrowser()) {
-		var key = "";
-		var list = "<tr><th>Item</th><th>Value</th></tr>\n";
-		var i = 0;
-		//for more advance feature, you can set cap on max items in the cart
-		for (i = 0; i <= localStorage.length-1; i++) {
-			key = localStorage.key(i);
-			list += "<tr><td>" + key + "</td>\n<td>"
-					+ localStorage.getItem(key) + "</td></tr>\n";
-		}
-		//if no item exists in the cart
-		if (list == "<tr><th>Item</th><th>Value</th></tr>\n") {
-			list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
-		}
-		//bind the data to html table
-		//you can use jQuery too....
-		document.getElementById('list').innerHTML = list;
-	} else {
-		alert('Cannot save shopping list as your browser does not support HTML 5');
-	}
-}
-
-/*
- =====> Checking the browser support
- //this step may not be required as most of modern browsers do support HTML5
- 
- //below function may be redundant
-function CheckBrowser() {
-	if ('localStorage' in window && window['localStorage'] !== null) {
-		// we can use localStorage object to store data
-		return true;
-	} else {
-			return false;
-	}
-}*/
-//-------------------------------------------------
-/*
-You can extend this script by inserting data to database or adding payment processing API to shopping cart..
-*/
-
