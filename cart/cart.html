@@ -66,6 +66,7 @@
 
     <div class="cart-container sec">
         <!-- Cart Items Section -->
+	<div class="left-section">
         <div class="cart-items sec">
 			<form name=ShoppingList>
 				<div id="items_table">
@@ -98,16 +99,25 @@
             </form>
         </div>
 
-        <!-- Price Breakdown Section -->
-        <div class="price-breakdown sec">
-            <h2>Price Breakdown</h2>
-            <p>Subtotal: $<span id="subtotal">0.00</span></p>
-            <p>Tax: $<span id="tax">0.00</span></p>
-            <p>Shipping: $<span id="shipping">0.00</span></p>
-            <p>Total: $<span id="total">0.00</span></p>
+	    <!-- Billing Address Section -->
+        <div class="billing-address sec">
+            <h2>Billing Address</h2>
+            <form id="billing-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="postal">Postal Code:</label>
+                <input type="text" id="postal" name="postal" required>
+            </form>
         </div>
 
-        <!-- Payment Section -->
+		<!-- Payment Section -->
         <div class="payment-section sec">
             <h2>Select Payment Method</h2>
             <form id="payment-form">
@@ -122,7 +132,21 @@
                 <button type="submit">Proceed to Payment</button>
             </form>
         </div>
-    </div>
+    	</div>
+	</div>
+
+        <!-- Price Breakdown Section -->
+	<div class="right-section">
+        <div class="price-breakdown sec">
+            <h2>Price Breakdown</h2>
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Tax: $<span id="tax">0.00</span></p>
+            <p>Shipping: $<span id="shipping">0.00</span></p>
+            <p>Total: $<span id="total">0.00</span></p>
+        </div>
+	</div>
+
+
 
     <!-- Footer -->
     <div class="footer-container sec">
