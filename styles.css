@@ -430,18 +430,13 @@ a {
 
 
 
-
-
-
-
-
 /*  */
 /* Featured container */
 /*  */
 .shopBy-container,
 .featured-container {
     background-color: var(--primary-color);
-    height: 65vh;
+    height: 75vh;
     text-align: center;
 }
 
